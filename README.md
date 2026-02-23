@@ -1,6 +1,6 @@
 # College HRMS Dashboard
 
-A simple College HRMS Dashboard built with React and Tailwind CSS. The app allows viewing employee statistics, displaying employee data in a table with pagination, and includes a responsive sidebar, header, and preloader.
+A simple College HRMS Dashboard built with React and Tailwind CSS. The app allows viewing employee statistics, displaying employee data in a table with pagination, and includes a responsive sidebar, header.
 
 ## Setup Steps
 
@@ -29,8 +29,6 @@ Flowbite React (for tables and pagination)
 Header.jsx – A top header that is displayed across pages.
 
 Sidebar.jsx – A responsive sidebar with navigation links to Dashboard and Employees pages.
-
-Loader.jsx - A preloader component displayed while page is loading.
 
 .pages
 
