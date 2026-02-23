@@ -1,16 +1,46 @@
-# React + Vite
+# College HRMS Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple College HRMS Dashboard built with React and Tailwind CSS. The app allows viewing employee statistics, displaying employee data in a table with pagination, and includes a responsive sidebar, header, and preloader.
 
-Currently, two official plugins are available:
+## Setup Steps
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Create the Project
+npm create vite@latest employeesystem -- --template react
+cd employeesystem
+code .
+npm run dev
+2. Remove unnecessary code from the project.
+3. Install Dependencies
 
-## React Compiler
+Tailwind CSS (for styling)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React Icons (for icons)
 
-## Expanding the ESLint configuration
+React Router DOM (for page navigation)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Google Fonts (included in index.html)
+
+Flowbite React (for tables and pagination)
+
+4. Inside src, create the following folders:
+.components
+
+Header.jsx – A top header that is displayed across pages.
+
+Sidebar.jsx – A responsive sidebar with navigation links to Dashboard and Employees pages.
+
+Loader.jsx - A preloader component displayed while page is loading.
+
+.pages
+
+Dashboard.jsx – Displays employee statistics in three cards: Total Employees, Employees Present, Employees on Leave. Uses employeeData.js and array methods (length, filter) to calculate counts.
+
+Employees.jsx – Displays employee data in a table with pagination. Uses employeeData.js and .map() method to render table rows dynamically.
+
+.data
+
+employeeData.js – Contains hardcoded JSON data for employees.
+
+5. Routing
+
+In App.jsx define routes for pages using React Router DOM. In main.jsx, wrap the App component with BrowserRouter for enabling routing throughout the app.
